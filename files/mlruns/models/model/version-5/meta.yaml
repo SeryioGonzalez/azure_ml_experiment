@@ -1,0 +1,13 @@
+aliases: []
+creation_timestamp: 1695306667624
+current_stage: None
+description: null
+last_updated_timestamp: 1695306667624
+name: model
+run_id: fc9060b638d94c9aaf4c86c317b67f29
+run_link: null
+source: file:///home/sergio/upwork/azure-ml-upwork-202309/files/mlruns/0/fc9060b638d94c9aaf4c86c317b67f29/artifacts/trained_model
+status: READY
+status_message: null
+user_id: null
+version: 5

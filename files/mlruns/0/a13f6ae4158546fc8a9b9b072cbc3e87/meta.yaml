@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sergio/upwork/azure-ml-upwork-202309/files/mlruns/0/a13f6ae4158546fc8a9b9b072cbc3e87/artifacts
+end_time: 1695306359695
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a13f6ae4158546fc8a9b9b072cbc3e87
+run_name: nimble-shrike-684
+run_uuid: a13f6ae4158546fc8a9b9b072cbc3e87
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1695306349642
+status: 3
+tags: []
+user_id: sergio

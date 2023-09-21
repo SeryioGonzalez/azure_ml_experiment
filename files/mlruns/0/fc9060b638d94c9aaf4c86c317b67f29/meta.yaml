@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sergio/upwork/azure-ml-upwork-202309/files/mlruns/0/fc9060b638d94c9aaf4c86c317b67f29/artifacts
+end_time: 1695306667794
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fc9060b638d94c9aaf4c86c317b67f29
+run_name: gregarious-yak-798
+run_uuid: fc9060b638d94c9aaf4c86c317b67f29
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1695306657695
+status: 3
+tags: []
+user_id: sergio

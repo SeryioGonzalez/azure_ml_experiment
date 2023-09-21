@@ -2,5 +2,5 @@
 .principal.json
 __pycache__/
 azure-ml-labs/
-files/
 old/
+files/mlruns/*

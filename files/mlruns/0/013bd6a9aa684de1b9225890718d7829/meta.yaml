@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sergio/upwork/azure-ml-upwork-202309/files/mlruns/0/013bd6a9aa684de1b9225890718d7829/artifacts
+end_time: 1695306528682
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 013bd6a9aa684de1b9225890718d7829
+run_name: tasteful-quail-101
+run_uuid: 013bd6a9aa684de1b9225890718d7829
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1695306517091
+status: 3
+tags: []
+user_id: sergio
