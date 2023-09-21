@@ -19,3 +19,4 @@ endpoint = ManagedOnlineEndpoint(
 )
 
 ml_client.online_endpoints.begin_create_or_update(endpoint).result()
+

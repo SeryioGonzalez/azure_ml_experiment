@@ -1,7 +1,7 @@
 azure:
   tenant: 1ca4042a-6212-45c4-89d2-46f903825df5
   subscription_id: 59eb0c35-11ec-477d-852a-6d58ed776b49
-  resource_group: azml
+  resource_group: sgml
   principal_name: azureprincipal
   credentials_file: .principal.json
   
