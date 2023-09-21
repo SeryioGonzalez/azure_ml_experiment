@@ -1,0 +1,89 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "workspaceName": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "onlineEndpointName": {
+      "type": "string"
+    },
+    "onlineDeploymentName": {
+      "type": "string"
+    },
+    "environmentId": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "endpointComputeType": {
+      "type": "string",
+      "allowedValues": [
+        "Managed",
+        "Kubernetes",
+        "AzureMLCompute"
+      ]
+    },
+    "skuName": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "The name of the SKU. Ex - P3. It is typically a letter+number code"
+      }
+    },
+    "skuCapacity": {
+      "type": "int",
+      "defaultValue": 1,
+      "metadata": {
+        "description": "If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted."
+      }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments",
+      "apiVersion": "2023-04-01-Preview",
+      "location": "[parameters('location')]",
+      "name": "[concat(parameters('workspaceName'), '/', parameters('onlineEndpointName'), '/', parameters('onlineDeploymentName'))]",
+      "identity": {
+          "type": "None"
+      },
+      "tags": {"service": "azureml"},
+      "properties": {
+          "endpointComputeType": "Managed",
+          "scaleSettings": {
+              "scaleType": "Default"
+          },
+          "model": "[parameters('model')]",
+          "appInsightsEnabled": "false",
+          "requestSettings": {
+              "requestTimeout": "PT90S",
+              "maxConcurrentRequestsPerInstance": "1"
+          },
+          "instanceType": "[parameters('skuName')]",
+          "livenessProbe": {
+              "initialDelay": "PT600S",
+              "period": "PT10S",
+              "timeout": "PT2S",
+              "successThreshold": "1",
+              "failureThreshold": "30"
+          },
+          "environmentVariables": {},
+          "egressPublicNetworkAccess": "Enabled"
+      },
+      "copy": {
+          "name": "onlineDeploymentCopy",
+          "count": 1,
+          "mode": "serial"
+      },
+      "sku": {
+          "capacity": "1",
+          "name": "default"
+      }
+  }
+  ]
+}
