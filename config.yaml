@@ -1,12 +1,12 @@
 azure:
-  tenant: 1ca4042a-6212-45c4-89d2-46f903825df5
-  subscription_id: 59eb0c35-11ec-477d-852a-6d58ed776b49
-  resource_group: sgjml
+  tenant: PUT_YOUR_TENANT_ID
+  subscription_id: PUT_YOUR_SUBSCRIPTION_ID
+  resource_group: PUT_YOUR_RG_NAME_AND_RESOURCE_NAME_PREFIX
   principal_name: azureprincipal
   credentials_file: .principal.json
   
 azureml:
-  azure_region: westeurope
+  azure_region: PUT_YOUR_AZURE_REGION_OF_CHOICE
 
 azureml_job:
   compute_instance_size: STANDARD_D2S_V3
