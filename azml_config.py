@@ -13,8 +13,8 @@ az_ml_environment_name = "{}_environment".format(az_resource_group)
 az_ml_compute_cluster  = "{}-compute".format(az_resource_group) 
 az_ml_online_endpoint  = "{}-endpoint".format(az_resource_group) 
 az_ml_deployment_name  = "{}-deployment".format(az_resource_group) 
-az_ml_model_name       = "model"
-az_autoscale_settings_name = "{}-autoscale_setting".format(az_resource_group) 
+az_ml_model_name       = "{}-deployment".format(az_resource_group) 
+az_autoscale_settings_name = "{}-model".format(az_resource_group) 
 
 az_ml_compute_instance_size = cfg["azureml_job"]["compute_instance_size"] 
 az_ml_max_compute_instances = cfg["azureml_job"]["compute_max_instances"] 

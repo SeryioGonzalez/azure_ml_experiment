@@ -92,3 +92,8 @@ mon_client.autoscale_settings.create_or_update(
         ]
     }
 )
+
+utils.log("INFO: Updating endpoint to get all traffic")
+online_endpoint = ml_client.online_endpoints.get(name=cfg.az_ml_online_endpoint)
+online_endpoint.traffic = {cfg.az_ml_deployment_name: 100}
+ml_client.begin_create_or_update(online_endpoint).result()
