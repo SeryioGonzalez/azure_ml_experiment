@@ -31,7 +31,7 @@ utils.log("INFO: Model in deployent is {}".format(model_deployment.model))
 utils.log("INFO: Defining scale out rule")
 rule_scale_out = ScaleRule(
     metric_trigger = MetricTrigger(
-        metric_name=cfg.az_autoscale_settings_name,
+        metric_name=cfg.az_ml_autoscale_metric,
         metric_resource_uri = model_deployment.id, 
         time_grain = datetime.timedelta(minutes = 1),
         statistic = "Average",
@@ -51,7 +51,7 @@ rule_scale_out = ScaleRule(
 utils.log("INFO: Defining scale in rule")
 rule_scale_in = ScaleRule(
     metric_trigger = MetricTrigger(
-        metric_name=cfg.az_autoscale_settings_name,
+        metric_name=cfg.az_ml_autoscale_metric,
         metric_resource_uri = model_deployment.id, 
         time_grain = datetime.timedelta(minutes = 1),
         statistic = "Average",

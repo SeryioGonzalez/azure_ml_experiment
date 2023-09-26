@@ -1,20 +1,11 @@
 {
   "input_data": {
     "columns": [
-      "Pregnancies",
-      "PlasmaGlucose",
-      "DiastolicBloodPressure",
-      "TricepsThickness",
-      "SerumInsulin",
-      "BMI",
-      "DiabetesPedigree",
-      "Age"
+      "sepal_length", "sepal_width", "petal_length", "petal_width"
     ],
     "index": [1],
     "data": [
-      [
-      0,148,58,11,179,39.19207553,0.160829008,45
-    ]
+      [5.4, 3.9, 1.7, 0.4]
     ]
   }
 }
