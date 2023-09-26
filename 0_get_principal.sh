@@ -61,7 +61,7 @@ then
         echo "AZ CLI not installed. Installing Az CLI"
         curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
     fi
-
+    set -x
     subscription_id=$(get_configuration_item "subscription_id")
     principal_name=$(get_configuration_item "principal_name")
 
