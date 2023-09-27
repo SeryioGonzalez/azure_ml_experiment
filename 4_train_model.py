@@ -27,7 +27,9 @@ command_job = command(
         "iris_csv": Input(
             type="uri_file",
             path="https://azuremlexamples.blob.core.windows.net/datasets/iris.csv",
-        )
+        ),
+        "learning_rate": 0.9,
+        "boosting": "gbdt"
     }
 )
 
